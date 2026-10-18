@@ -6,6 +6,8 @@ import ErrorBoundary from "../components/common/ErrorBoundary";
 import HomeSection from "./HomeSection";
 import AboutSection from "./AboutSection";
 import ServicesSection from "./ServicesSection";
+import MachinesSection from "../components/MachinesSection";
+import GallerySection from "../components/GallerySection";
 import TrainersSection from "./TrainersSection";
 import PricingSection from "./PricingSection";
 import BmiSection from "./BmiSection";
@@ -15,6 +17,8 @@ const PAGES_REGISTRY = {
   HomeSection,
   AboutSection,
   ServicesSection,
+  MachinesSection,
+  GallerySection,
   TrainersSection,
   PricingSection,
   BmiSection,

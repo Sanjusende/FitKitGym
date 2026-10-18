@@ -8,65 +8,40 @@ export default function FitVideoHero({ onOpenJoin }) {
     {
       id: 1,
       videoSrc: "/videos/gym_boy_barbell.mp4",
-      tag: "BOY ATHLETE • BARBELL STRENGTH",
-      eyebrow: "READY TO CHANGE YOUR PHYSIQUE",
-      titleLine1: "KEEP BODY",
-      titleLine2: "FIT & STRONG",
-      subtitle: "Unleash explosive power with Olympic barbells, personalized heavy lifts, and dedicated coaching.",
-      ctaPrimary: "JOIN WITH US",
-      ctaSecondary: "OUR SERVICES"
+      badge: "BHOPAL'S PREMIER FITNESS HUB",
+      titleLine1: "FORGED IN IRON.",
+      titleLine2: "BUILT FOR GLORY.",
+      subtitle: "Push limits. Break barriers. Become unstoppable. Experience FITKIT's most elite strength destination.",
+      ctaPrimary: "JOIN NOW",
+      ctaSecondary: "EXPLORE SERVICES"
     },
     {
       id: 2,
       videoSrc: "/videos/gym_woman_squats.mp4",
-      tag: "WOMAN FITNESS • DUMBBELL SCULPT",
-      eyebrow: "SCULPT & EMPOWER YOURSELF",
-      titleLine1: "BUILD LEAN",
-      titleLine2: "MUSCLE & TONE",
-      subtitle: "Dynamic dumbbell hypertrophy and lower body sculpting designed for high athletic tone.",
-      ctaPrimary: "JOIN WITH US",
-      ctaSecondary: "OUR SERVICES"
+      badge: "ELITE STRENGTH & HYPERTROPHY",
+      titleLine1: "BUILT DIFFERENT.",
+      titleLine2: "BUILT STRONGER.",
+      subtitle: "World-class biomechanical equipment, personalized programming, and results that speak for themselves.",
+      ctaPrimary: "JOIN NOW",
+      ctaSecondary: "VIEW MACHINES"
     },
     {
       id: 3,
       videoSrc: "/videos/gym_boy_ropes.mp4",
-      tag: "BOY ATHLETE • BATTLE ROPES",
-      eyebrow: "EXPLODE PAST YOUR LIMITS",
+      badge: "CHAMPIONS TRAIN HERE",
       titleLine1: "UNLEASH YOUR",
-      titleLine2: "RAW POWER",
-      subtitle: "High-intensity metabolic battle rope intervals that incinerate fat while building endurance.",
-      ctaPrimary: "CLAIM FREE PASS",
-      ctaSecondary: "MEET COACHES"
-    },
-    {
-      id: 4,
-      videoSrc: "/videos/gym_woman_crossfit.mp4",
-      tag: "WOMAN ATHLETE • CROSSFIT & BURPEES",
-      eyebrow: "INTENSE ATHLETIC CONDITIONING",
-      titleLine1: "ELEVATE YOUR",
-      titleLine2: "PERFORMANCE",
-      subtitle: "High-octane CrossFit conditioning and functional mobility to keep you sharp and injury-free.",
-      ctaPrimary: "START TODAY",
-      ctaSecondary: "SEE PRICING"
-    },
-    {
-      id: 5,
-      videoSrc: "/videos/gym_girl_kettlebell.mp4",
-      tag: "GIRL FITNESS • KETTLEBELL TRAINING",
-      eyebrow: "TOTAL BODY FUNCTIONAL MOVEMENT",
-      titleLine1: "DISCIPLINE &",
-      titleLine2: "ENDURANCE",
-      subtitle: "Master kettlebell squats, posterior chain activation, and full body cardiovascular stamina.",
-      ctaPrimary: "BOOK A TRIAL",
-      ctaSecondary: "OUR SERVICES"
+      titleLine2: "MAX POTENTIAL.",
+      subtitle: "Join 2,500+ athletes who chose discipline over excuses. Your journey begins the moment you step in.",
+      ctaPrimary: "JOIN NOW",
+      ctaSecondary: "VIEW PLANS"
     }
   ];
 
-  // Auto slide advance every 6.5 seconds
+  // Auto slide advance every 7 seconds
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 6500);
+    }, 7000);
     return () => clearInterval(timer);
   }, [slides.length]);
 
@@ -81,7 +56,7 @@ export default function FitVideoHero({ onOpenJoin }) {
   const scrollToServices = () => {
     const el = document.getElementById("services");
     if (el) {
-      const yOffset = -70;
+      const yOffset = -72;
       const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
     }
@@ -90,9 +65,9 @@ export default function FitVideoHero({ onOpenJoin }) {
   const slide = slides[currentSlide];
 
   return (
-    <section id="home" className="relative min-h-[92vh] flex items-center overflow-hidden bg-[#080A0E] select-none">
+    <section id="home" className="relative min-h-[92vh] flex items-center overflow-hidden bg-[#0a0a0a] select-none">
       
-      {/* 1. Background Video Slider with Crossfade */}
+      {/* 1. Background Video Slider with Atmospheric Dimming */}
       {slides.map((s, index) => {
         const isActive = index === currentSlide;
         return (
@@ -108,80 +83,83 @@ export default function FitVideoHero({ onOpenJoin }) {
               muted
               loop
               playsInline
-              className="w-full h-full object-cover object-center filter brightness-[0.70] contrast-[1.10]"
+              className="w-full h-full object-cover object-center filter brightness-[0.55] contrast-[1.15]"
             />
           </div>
         );
       })}
 
-      {/* 2. Gradient Overlays for High-Contrast Polish with Clear Video Visibility */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#080A0E]/90 via-[#080A0E]/50 to-transparent/10 z-10 pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#080A0E]/85 via-transparent to-[#080A0E]/30 z-10 pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#080A0E]/30 via-transparent to-[#080A0E]/85 z-10 pointer-events-none" />
+      {/* 2. Gradient Overlays for High-Contrast Cinematic Aesthetic */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/95 via-[#0a0a0a]/70 to-[#0a0a0a]/40 z-10 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-[#0a0a0a]/60 z-10 pointer-events-none" />
+      
+      {/* Subtle background tech grid lines */}
+      <div 
+        className="absolute inset-0 z-10 pointer-events-none opacity-15"
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                            linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px)`,
+          backgroundSize: '60px 60px'
+        }}
+      />
 
-      {/* 3. Left Vertical Navigation: < P R E V */}
+      {/* 3. Left/Right Slide Arrows */}
       <button
         onClick={handlePrev}
-        className="absolute left-3 sm:left-8 top-1/2 -translate-y-1/2 z-30 flex flex-col items-center gap-2 group cursor-pointer text-[#8F9BB3] hover:text-[#E63946] transition-colors py-4 px-2"
+        className="hidden md:flex absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full border border-white/10 hover:border-[#FF2E4C] bg-black/40 hover:bg-black/80 items-center justify-center text-white/70 hover:text-[#FF2E4C] transition-all cursor-pointer backdrop-blur-sm"
         aria-label="Previous Slide"
       >
-        <ChevronLeft className="w-5 h-5 text-white group-hover:text-[#E63946] group-hover:-translate-x-1 transition-all" />
-        <span className="[writing-mode:vertical-lr] rotate-180 text-[10px] font-black uppercase tracking-[0.4em] text-white/70 group-hover:text-[#E63946]">
-          PREV
-        </span>
+        <ChevronLeft className="w-5 h-5" />
       </button>
 
-      {/* 4. Right Vertical Navigation: N E X T > */}
       <button
         onClick={handleNext}
-        className="absolute right-3 sm:right-8 top-1/2 -translate-y-1/2 z-30 flex flex-col items-center gap-2 group cursor-pointer text-[#8F9BB3] hover:text-[#E63946] transition-colors py-4 px-2"
+        className="hidden md:flex absolute right-16 sm:right-20 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full border border-white/10 hover:border-[#FF2E4C] bg-black/40 hover:bg-black/80 items-center justify-center text-white/70 hover:text-[#FF2E4C] transition-all cursor-pointer backdrop-blur-sm"
         aria-label="Next Slide"
       >
-        <span className="[writing-mode:vertical-lr] text-[10px] font-black uppercase tracking-[0.4em] text-white/70 group-hover:text-[#E63946]">
-          NEXT
-        </span>
-        <ChevronRight className="w-5 h-5 text-white group-hover:text-[#E63946] group-hover:translate-x-1 transition-all" />
+        <ChevronRight className="w-5 h-5" />
       </button>
 
-      {/* 5. Center-Left Hero Content Overlay */}
-      <div className="max-w-7xl mx-auto px-12 sm:px-20 w-full relative z-20 pt-12 pb-16">
-        <div className="max-w-2xl">
+      {/* 4. Center-Left Hero Content Overlay */}
+      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 w-full relative z-20 pt-16 pb-20">
+        <div className="max-w-3xl">
           
-          {/* Eyebrow and Tag Badge */}
-          <div className="flex flex-wrap items-center gap-2.5 mb-4">
-            <span className="w-8 h-[2px] bg-[#E63946]" />
-            <span className="text-[#E63946] text-xs sm:text-sm font-black uppercase tracking-widest">
-              {slide.eyebrow}
+          {/* Eyebrow Badge with trailing horizontal red line */}
+          <div className="flex items-center gap-3 mb-6">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#FF2E4C]/50 bg-[#FF2E4C]/10 text-[#FF2E4C] text-[11px] font-extrabold tracking-widest uppercase shadow-[0_0_15px_rgba(255,46,76,0.25)]">
+              {slide.badge}
             </span>
-            <span className="px-2.5 py-0.5 rounded-full bg-white/10 text-white/80 text-[10px] font-black uppercase tracking-wider backdrop-blur-sm border border-white/10">
-              {slide.tag}
-            </span>
+            <div className="hidden sm:block h-[1px] w-36 bg-gradient-to-r from-[#FF2E4C]/70 to-transparent" />
           </div>
 
-          {/* Huge White Chiseled Typography */}
-          <h1 className="font-heading text-5xl sm:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.92] mb-5 text-white drop-shadow-2xl">
-            <span className="block">{slide.titleLine1}</span>
-            <span className="block text-white">{slide.titleLine2}</span>
+          {/* Huge White & Neon Red Chiseled Typography */}
+          <h1 className="font-heading text-5xl sm:text-7xl lg:text-[5.5rem] font-black uppercase tracking-tight leading-[0.92] mb-6 drop-shadow-2xl">
+            <span className="block text-[#FF2E4C] neon-glow">
+              {slide.titleLine1}
+            </span>
+            <span className="block text-white mt-1">
+              {slide.titleLine2}
+            </span>
           </h1>
 
           {/* Subtitle Description */}
-          <p className="text-sm sm:text-base text-slate-300 font-medium leading-relaxed max-w-lg mb-8">
+          <p className="text-base sm:text-lg text-neutral-300 font-normal leading-relaxed max-w-xl mb-10">
             {slide.subtitle}
           </p>
 
-          {/* Dual Action Buttons */}
+          {/* Dual Action Buttons matching red & black style */}
           <div className="flex flex-wrap items-center gap-4">
             <button
               onClick={onOpenJoin}
-              className="px-8 py-4 rounded-lg bg-[#E63946] hover:bg-[#D62828] text-white font-black text-xs sm:text-sm uppercase tracking-wider transition-all duration-200 shadow-[0_0_25px_rgba(230,57,70,0.5)] hover:shadow-[0_0_35px_rgba(230,57,70,0.8)] hover:scale-105 flex items-center gap-2 group cursor-pointer"
+              className="px-8 py-4 rounded-full bg-gradient-to-r from-[#FF2E4C] to-[#E63946] text-white font-extrabold text-sm tracking-wider uppercase transition-all duration-300 shadow-[0_0_25px_rgba(255,46,76,0.5)] hover:shadow-[0_0_40px_rgba(255,46,76,0.8)] hover:scale-105 flex items-center gap-2 group cursor-pointer"
             >
               <span>{slide.ctaPrimary}</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 stroke-[2.5] group-hover:translate-x-1 transition-transform" />
             </button>
 
             <button
               onClick={scrollToServices}
-              className="px-8 py-4 rounded-lg bg-black/40 hover:bg-[#1E2533] border border-white/20 hover:border-[#E63946] text-white font-black text-xs sm:text-sm uppercase tracking-wider transition-all duration-200 backdrop-blur-md cursor-pointer"
+              className="px-8 py-4 rounded-full bg-[#111111]/80 hover:bg-[#1a1a1a] border border-white/20 hover:border-[#FF2E4C] text-white hover:text-[#FF2E4C] font-extrabold text-sm tracking-wider uppercase transition-all duration-300 backdrop-blur-md cursor-pointer"
             >
               {slide.ctaSecondary}
             </button>
@@ -190,16 +168,26 @@ export default function FitVideoHero({ onOpenJoin }) {
         </div>
       </div>
 
+      {/* 5. Right-Hand Side Vertical "SCROLL" Indicator with pulsating Red Bar */}
+      <div className="hidden lg:flex absolute right-8 bottom-16 z-30 flex-col items-center gap-3">
+        <span className="[writing-mode:vertical-lr] text-[10px] font-extrabold tracking-[0.3em] uppercase text-neutral-400">
+          SCROLL
+        </span>
+        <div className="w-[2px] h-14 bg-neutral-800 rounded-full relative overflow-hidden">
+          <div className="w-full h-1/2 bg-gradient-to-b from-[#FF2E4C] to-[#E63946] rounded-full animate-bounce shadow-[0_0_8px_#FF2E4C]" />
+        </div>
+      </div>
+
       {/* 6. Bottom Slide Progress Dots */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
         {slides.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setCurrentSlide(idx)}
             className={`transition-all duration-300 rounded-full cursor-pointer ${
               idx === currentSlide
-                ? "w-8 h-2 bg-[#E63946] shadow-[0_0_10px_#E63946]"
-                : "w-2 h-2 bg-white/40 hover:bg-white"
+                ? "w-8 h-2 bg-[#FF2E4C] shadow-[0_0_10px_#FF2E4C]"
+                : "w-2 h-2 bg-neutral-600 hover:bg-neutral-400"
             }`}
             aria-label={`Slide ${idx + 1}`}
           />

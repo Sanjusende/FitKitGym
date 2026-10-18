@@ -5,10 +5,10 @@ export default function FitStats() {
   const sectionRef = useRef(null);
 
   const stats = [
-    { target: 10, unit: "", plus: "+", label: "Years Of Experience" },
-    { target: 500, unit: "", plus: "+", label: "Happy Clients" },
-    { target: 50, unit: "", plus: "+", label: "Expert Trainers" },
-    { target: 15, unit: "k", plus: "+", label: "Instagram Followers" },
+    { target: 2500, unit: "", plus: "+", label: "Active Champions" },
+    { target: 120, unit: "", plus: "+", label: "World-Class Machines" },
+    { target: 15, unit: "", plus: "+", label: "Certified Master Coaches" },
+    { target: 99, unit: "%", plus: "", label: "Transformation Rate" },
   ];
 
   const [currentValues, setCurrentValues] = useState(stats.map(() => 0));
@@ -68,23 +68,23 @@ export default function FitStats() {
   return (
     <section
       ref={sectionRef}
-      className="py-14 bg-[#080A0E] border-t border-b border-[#1E2533] relative select-none"
+      className="py-12 bg-[#0a0a0a] border-t border-b border-[#1f1f1f] relative select-none"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-[#1E2533]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-[#1f1f1f]">
           {stats.map((s, idx) => (
             <div
               key={idx}
               className="flex flex-col items-center justify-center pt-4 md:pt-0 group cursor-default"
             >
-              <div className="font-heading text-5xl sm:text-6xl font-black text-white tracking-tight flex items-baseline justify-center group-hover:scale-105 transition-transform duration-300">
+              <div className="font-heading text-4xl sm:text-6xl font-black text-white tracking-tight flex items-baseline justify-center group-hover:scale-105 transition-transform duration-300">
                 <span className="tabular-nums">
                   {currentValues[idx]}
                   {s.unit}
                 </span>
-                <span className="text-[#E63946] ml-0.5">{s.plus}</span>
+                <span className="text-[#FF2E4C] ml-0.5 red-glow">{s.plus}</span>
               </div>
-              <p className="text-xs sm:text-sm font-bold text-[#8F9BB3] group-hover:text-white uppercase tracking-wider mt-2 transition-colors">
+              <p className="text-xs sm:text-sm font-extrabold text-neutral-400 group-hover:text-white uppercase tracking-wider mt-2 transition-colors">
                 {s.label}
               </p>
             </div>

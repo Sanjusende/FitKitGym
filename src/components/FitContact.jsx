@@ -46,28 +46,25 @@ export default function FitContact() {
   )}%20training%20for%20the%20${encodeURIComponent(formData.preferredTime)}%20slot.`;
 
   return (
-    <section id="contact" className="py-24 bg-[#080A0E] relative scroll-mt-20 border-t border-[#1E2533]">
+    <section id="contact" className="py-24 bg-[#0a0a0a] relative scroll-mt-20 border-t border-[#1f1f1f]">
       {/* Background glow accents */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#E63946]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#FF2E4C]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 mb-3">
-            <span className="w-6 h-[2px] bg-[#E63946]" />
-            <span className="text-[#E63946] text-xs font-black uppercase tracking-widest">
-              CONTACT FITKIT GYM
-            </span>
-            <span className="w-6 h-[2px] bg-[#E63946]" />
-          </div>
-          <h2 className="font-heading text-4xl sm:text-5xl font-black uppercase tracking-tight text-white mb-4">
-            START YOUR FITNESS JOURNEY
+          <span className="inline-flex items-center px-4 py-1 rounded-full border border-[#FF2E4C]/50 bg-[#FF2E4C]/10 text-[#FF2E4C] text-[11px] font-extrabold tracking-widest uppercase mb-4 shadow-[0_0_12px_rgba(255,46,76,0.25)]">
+            CONTACT & LOCATION
+          </span>
+          <h2 className="font-heading text-4xl sm:text-6xl font-black uppercase tracking-tight text-white mb-4">
+            START YOUR <span className="text-[#FF2E4C] red-glow">JOURNEY TODAY</span>
           </h2>
-          <p className="text-[#8F9BB3] text-sm sm:text-base leading-relaxed">
-            Have questions about our training programs, certified coaches, or membership packages?
+          <p className="text-neutral-400 text-sm sm:text-base leading-relaxed font-normal">
+            Have questions about our 120+ machines, certified coaches, or membership packages?
             Drop us a message below or connect directly on WhatsApp for an instant response.
           </p>
+          <div className="w-12 h-1 bg-[#FF2E4C] rounded-full mt-5 mx-auto shadow-[0_0_10px_#FF2E4C]" />
         </div>
 
         {/* Contact Container Grid */}
@@ -77,11 +74,11 @@ export default function FitContact() {
           <div className="lg:col-span-5 flex flex-col justify-between gap-6">
             
             {/* WhatsApp Direct Highlight Box */}
-            <div className="p-7 rounded-2xl bg-gradient-to-br from-[#0F1622] to-[#0A0E17] border border-[#1E2533] shadow-xl relative overflow-hidden group">
+            <div className="p-7 rounded-2xl bg-gradient-to-br from-[#111111] to-[#0d0d0d] border border-[#1f1f1f] shadow-2xl relative overflow-hidden group">
               <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#25D366]/10 rounded-full blur-2xl group-hover:scale-125 transition-transform" />
               
               <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-[#25D366]/20 border border-[#25D366]/40 flex items-center justify-center text-[#25D366] shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-[#25D366]/15 border border-[#25D366]/40 flex items-center justify-center text-[#25D366] shrink-0">
                   <MessageCircle className="w-6 h-6 fill-current" />
                 </div>
                 <div>
@@ -90,7 +87,7 @@ export default function FitContact() {
                 </div>
               </div>
 
-              <p className="text-xs text-[#8F9BB3] mb-5 leading-relaxed">
+              <p className="text-xs text-neutral-400 mb-5 leading-relaxed">
                 Connect directly with our Head Fitness Consultant. Get quick answers on timetable slots, personal training rates, and workout demo passes.
               </p>
 
@@ -98,7 +95,7 @@ export default function FitContact() {
                 href={directWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 w-full py-3 px-5 rounded-xl bg-[#25D366] hover:bg-[#1EBE5D] text-black font-black text-xs uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:scale-[1.02]"
+                className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-5 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:scale-[1.02]"
               >
                 <MessageCircle className="w-4 h-4 fill-black" />
                 <span>CHAT ON WHATSAPP (+91 8815926552)</span>
@@ -108,43 +105,43 @@ export default function FitContact() {
             {/* Contact Info Cards */}
             <div className="space-y-4">
               {/* Phone */}
-              <div className="p-5 rounded-2xl bg-[#0E1219] border border-[#1E2533] flex items-center gap-4 hover:border-[#E63946]/50 transition-colors">
-                <div className="w-11 h-11 rounded-xl bg-[#151B26] border border-[#1E2533] flex items-center justify-center text-[#E63946] shrink-0">
+              <div className="p-5 rounded-2xl bg-[#111111] border border-[#1f1f1f] flex items-center gap-4 hover:border-[#FF2E4C]/50 transition-colors">
+                <div className="w-11 h-11 rounded-xl bg-[#161616] border border-[#1f1f1f] flex items-center justify-center text-[#FF2E4C] shrink-0">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-[#8F9BB3]">Hotline Phone</p>
-                  <a href="tel:+18004567890" className="font-heading text-lg font-black text-white hover:text-[#E63946] transition-colors">
-                    +1 (800) 456-7890
+                  <p className="text-[10px] font-black uppercase tracking-widest text-neutral-500">Hotline Phone</p>
+                  <a href="tel:+918815926552" className="font-heading text-lg font-black text-white hover:text-[#FF2E4C] transition-colors">
+                    +91 88159 26552
                   </a>
                 </div>
               </div>
 
               {/* Email */}
-              <div className="p-5 rounded-2xl bg-[#0E1219] border border-[#1E2533] flex items-center gap-4 hover:border-[#E63946]/50 transition-colors">
-                <div className="w-11 h-11 rounded-xl bg-[#151B26] border border-[#1E2533] flex items-center justify-center text-[#E63946] shrink-0">
+              <div className="p-5 rounded-2xl bg-[#111111] border border-[#1f1f1f] flex items-center gap-4 hover:border-[#FF2E4C]/50 transition-colors">
+                <div className="w-11 h-11 rounded-xl bg-[#161616] border border-[#1f1f1f] flex items-center justify-center text-[#FF2E4C] shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-[#8F9BB3]">Official Email</p>
-                  <a href="mailto:support@fitkitgym.com" className="font-heading text-base font-black text-white hover:text-[#E63946] transition-colors">
-                    support@fitkitgym.com
+                  <p className="text-[10px] font-black uppercase tracking-widest text-neutral-500">Official Email</p>
+                  <a href="mailto:contact@fitkitgym.com" className="font-heading text-base font-black text-white hover:text-[#FF2E4C] transition-colors">
+                    contact@fitkitgym.com
                   </a>
                 </div>
               </div>
 
               {/* Location & Hours */}
-              <div className="p-5 rounded-2xl bg-[#0E1219] border border-[#1E2533] flex items-start gap-4 hover:border-[#E63946]/50 transition-colors">
-                <div className="w-11 h-11 rounded-xl bg-[#151B26] border border-[#1E2533] flex items-center justify-center text-[#E63946] shrink-0 mt-0.5">
+              <div className="p-5 rounded-2xl bg-[#111111] border border-[#1f1f1f] flex items-start gap-4 hover:border-[#FF2E4C]/50 transition-colors">
+                <div className="w-11 h-11 rounded-xl bg-[#161616] border border-[#1f1f1f] flex items-center justify-center text-[#FF2E4C] shrink-0 mt-0.5">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-[#8F9BB3]">Gym Location</p>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-neutral-500">Bhopal Hub Location</p>
                   <p className="text-sm font-bold text-white mb-1">
                     Near Prabhat Petrol Pump, Raisen Road, Subhash Nagar, Bhopal, MP 462023
                   </p>
-                  <p className="text-xs text-[#8F9BB3] flex items-center gap-1.5 font-medium">
-                    <Clock className="w-3.5 h-3.5 text-[#E63946]" />
+                  <p className="text-xs text-neutral-400 flex items-center gap-1.5 font-medium">
+                    <Clock className="w-3.5 h-3.5 text-[#FF2E4C]" />
                     Mon - Sun: 5:30 AM – 10:30 PM
                   </p>
                 </div>
@@ -213,7 +210,7 @@ export default function FitContact() {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="e.g. John Doe"
-                      className="w-full px-4 py-3.5 rounded-xl bg-[#151B26] border border-[#1E2533] text-white text-sm focus:outline-none focus:border-[#E63946] transition-colors placeholder:text-white/30"
+                      className="w-full px-4 py-3.5 rounded-xl bg-[#161616] border border-[#1f1f1f] text-white text-sm focus:outline-none focus:border-[#FF2E4C] transition-colors placeholder:text-neutral-500"
                     />
                   </div>
 
@@ -227,8 +224,8 @@ export default function FitContact() {
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+1 (555) 000-0000"
-                      className="w-full px-4 py-3.5 rounded-xl bg-[#151B26] border border-[#1E2533] text-white text-sm focus:outline-none focus:border-[#E63946] transition-colors placeholder:text-white/30"
+                      placeholder="+91 98765 43210"
+                      className="w-full px-4 py-3.5 rounded-xl bg-[#161616] border border-[#1f1f1f] text-white text-sm focus:outline-none focus:border-[#FF2E4C] transition-colors placeholder:text-neutral-500"
                     />
                   </div>
                 </div>
@@ -245,7 +242,7 @@ export default function FitContact() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="john@example.com"
-                    className="w-full px-4 py-3.5 rounded-xl bg-[#151B26] border border-[#1E2533] text-white text-sm focus:outline-none focus:border-[#E63946] transition-colors placeholder:text-white/30"
+                    className="w-full px-4 py-3.5 rounded-xl bg-[#161616] border border-[#1f1f1f] text-white text-sm focus:outline-none focus:border-[#FF2E4C] transition-colors placeholder:text-neutral-500"
                   />
                 </div>
 
@@ -259,7 +256,7 @@ export default function FitContact() {
                       name="goal"
                       value={formData.goal}
                       onChange={handleChange}
-                      className="w-full px-4 py-3.5 rounded-xl bg-[#151B26] border border-[#1E2533] text-white text-sm focus:outline-none focus:border-[#E63946] transition-colors cursor-pointer"
+                      className="w-full px-4 py-3.5 rounded-xl bg-[#161616] border border-[#1f1f1f] text-white text-sm focus:outline-none focus:border-[#FF2E4C] transition-colors cursor-pointer"
                     >
                       <option value="Heavy Strength & Muscle Building">Heavy Strength & Muscle Building</option>
                       <option value="Weight Loss & Lean Body">Weight Loss & Lean Body</option>
@@ -277,7 +274,7 @@ export default function FitContact() {
                       name="preferredTime"
                       value={formData.preferredTime}
                       onChange={handleChange}
-                      className="w-full px-4 py-3.5 rounded-xl bg-[#151B26] border border-[#1E2533] text-white text-sm focus:outline-none focus:border-[#E63946] transition-colors cursor-pointer"
+                      className="w-full px-4 py-3.5 rounded-xl bg-[#161616] border border-[#1f1f1f] text-white text-sm focus:outline-none focus:border-[#FF2E4C] transition-colors cursor-pointer"
                     >
                       <option value="Early Morning (5:00 AM - 9:00 AM)">Early Morning (5:00 AM - 9:00 AM)</option>
                       <option value="Mid-Day (10:00 AM - 3:00 PM)">Mid-Day (10:00 AM - 3:00 PM)</option>
@@ -298,17 +295,17 @@ export default function FitContact() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us about your fitness background, any injuries, or what you'd like to achieve..."
-                    className="w-full px-4 py-3 rounded-xl bg-[#151B26] border border-[#1E2533] text-white text-sm focus:outline-none focus:border-[#E63946] transition-colors placeholder:text-white/30 resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-[#161616] border border-[#1f1f1f] text-white text-sm focus:outline-none focus:border-[#FF2E4C] transition-colors placeholder:text-neutral-500 resize-none"
                   />
                 </div>
 
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-xl bg-[#E63946] hover:bg-[#d62839] text-white font-black text-sm uppercase tracking-wider transition-all duration-200 shadow-[0_0_30px_rgba(230,57,70,0.4)] hover:shadow-[0_0_40px_rgba(230,57,70,0.6)] flex items-center justify-center gap-2 group cursor-pointer"
+                  className="w-full py-4 rounded-full bg-gradient-to-r from-[#FF2E4C] to-[#E63946] text-white font-extrabold text-sm uppercase tracking-wider transition-all duration-300 shadow-[0_0_25px_rgba(255,46,76,0.4)] hover:shadow-[0_0_35px_rgba(255,46,76,0.65)] hover:scale-[1.01] flex items-center justify-center gap-2 group cursor-pointer"
                 >
                   <span>SUBMIT MESSAGE / BOOK CONSULTATION</span>
-                  <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <Send className="w-4 h-4 stroke-[2.5] group-hover:translate-x-1 transition-transform" />
                 </button>
               </form>
             )}

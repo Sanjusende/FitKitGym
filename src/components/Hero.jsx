@@ -14,7 +14,7 @@ export default function Hero() {
       {/* Background Graphic Elements & Diagonal Pink Wings inspired by reference image */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Subtle dark grid background */}
-        <div className="absolute inset-0 bg-grid-pattern opacity-25" />
+        <div className="absolute inset-0 bg-grid-pattern opacity-" />
 
         {/* Dramatic Diagonal Neon Pink Wings / Chevron Banner behind hero */}
         <div className="absolute -left-20 top-1/4 w-[140%] h-32 md:h-48 bg-gradient-to-r from-[#FF1458]/20 via-[#FF1458]/10 to-transparent -rotate-6 transform -translate-y-12 blur-xl" />

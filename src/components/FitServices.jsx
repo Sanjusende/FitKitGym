@@ -4,131 +4,117 @@ import { Dumbbell, Video, Utensils, Zap, ArrowRight, Sparkles } from "lucide-rea
 export default function FitServices({ onOpenJoin }) {
   const services = [
     {
-      id: "workout-videos",
-      title: "Workout Videos",
-      category: "ON-DEMAND COACHING",
-      description: "Access hundreds of HD workout breakdowns, lifting cues, form audits, and mobility tutorials.",
-      icon: Video,
-      bgImage: "/images/services/service_workout_videos.jpg"
-    },
-    {
       id: "personal-training",
-      title: "Personal Training",
-      category: "1-ON-1 SESSIONS",
-      description: "Custom strength programming with progressive overload, biomechanical feedback, and accountability.",
-      icon: Dumbbell,
+      title: "PERSONAL TRAINING",
+      badge: "MOST POPULAR",
+      badgeColor: "bg-[#FF2E4C]/20 text-[#FF2E4C] border-[#FF2E4C]/40",
+      emoji: "🏋️",
+      description: "One-on-one sessions with certified elite coaches tailored to your specific goals.",
       bgImage: "/images/services/service_personal_training.jpg"
     },
     {
-      id: "nutritional-guidance",
-      title: "Nutritional Guidance",
-      category: "DIET & MACROS",
-      description: "Bio-individual macro targets and flexible eating protocols tailored to fuel dense muscle and rapid fat loss.",
-      icon: Utensils,
-      bgImage: "/images/services/service_nutrition.jpg"
+      id: "cardio-programs",
+      title: "CARDIO PROGRAMS",
+      badge: "FAT BURN",
+      badgeColor: "bg-[#E63946]/20 text-[#E63946] border-[#E63946]/40",
+      emoji: "🔥",
+      description: "High-intensity programs designed to torch fat and maximize cardiovascular endurance.",
+      bgImage: "/images/services/service_workout_videos.jpg"
     },
     {
-      id: "muscle-building",
-      title: "Muscle Building",
-      category: "HYPERTROPHY LAB",
-      description: "High-volume hypertrophy mesocycles designed to sculpt dense, athletic muscle on shoulders, chest, and legs.",
-      icon: Zap,
+      id: "weight-training",
+      title: "WEIGHT TRAINING",
+      badge: "STRENGTH",
+      badgeColor: "bg-[#FF2E4C]/20 text-[#FF2E4C] border-[#FF2E4C]/40",
+      emoji: "💪",
+      description: "Structured lifting programs from beginner to advanced with progressive overload methodology.",
       bgImage: "/images/services/service_muscle_building.jpg"
+    },
+    {
+      id: "diet-nutrition",
+      title: "DIET & NUTRITION",
+      badge: "NUTRITION",
+      badgeColor: "bg-[#FF2E4C]/20 text-[#FF2E4C] border-[#FF2E4C]/40",
+      emoji: "🥗",
+      description: "Personalized meal plans crafted by sports nutritionists to fuel your performance.",
+      bgImage: "/images/services/service_nutrition.jpg"
     }
   ];
 
   return (
-    <section id="services" className="py-24 bg-[#080A0E] relative scroll-mt-20 border-t border-[#1E2533]/60">
+    <section id="services" className="py-24 bg-[#0a0a0a] relative scroll-mt-20 border-t border-[#1f1f1f]">
       
       {/* Background glow accent */}
-      <div className="absolute top-1/3 right-10 w-96 h-96 bg-[#E63946]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#FF2E4C]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
         
-        {/* Header Row */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
-          <div>
-            <div className="flex items-center gap-2 mb-2">
-              <span className="w-6 h-[2px] bg-[#E63946]" />
-              <span className="text-[#E63946] text-xs font-black uppercase tracking-widest">
-                OUR SERVICES
-              </span>
-            </div>
-            <h2 className="font-heading text-4xl sm:text-5xl font-black uppercase tracking-tight text-white">
-              OUR SERVICE FOR YOU
-            </h2>
-            <p className="text-[#8F9BB3] text-sm mt-2 max-w-xl">
-              Engineered training systems and professional guidance tailored for your personal physique transformation.
-            </p>
-          </div>
+        {/* Centered Header */}
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+          <span className="inline-flex items-center px-4 py-1 rounded-full border border-[#FF2E4C]/50 bg-[#FF2E4C]/10 text-[#FF2E4C] text-[11px] font-extrabold tracking-widest uppercase mb-4 shadow-[0_0_12px_rgba(255,46,76,0.25)]">
+            WHAT WE OFFER
+          </span>
 
-          <button
-            onClick={onOpenJoin}
-            className="self-start md:self-auto px-6 py-3 rounded-xl border border-white/20 hover:border-[#E63946] text-white hover:text-[#E63946] text-xs font-black uppercase tracking-wider transition-all duration-200 hover:scale-105 cursor-pointer bg-[#0E1219]/80 backdrop-blur-sm"
-          >
-            SEE ALL SERVICES
-          </button>
+          <h2 className="font-heading text-4xl sm:text-6xl font-black uppercase tracking-tight text-white leading-[1.02]">
+            SERVICES BUILT <br />
+            <span className="text-[#FF2E4C] red-glow">FOR CHAMPIONS</span>
+          </h2>
+
+          <p className="text-neutral-400 text-sm sm:text-base mt-4 max-w-xl font-normal">
+            Every program is crafted with precision, passion, and proven methodology.
+          </p>
+
+          <div className="w-12 h-1 bg-[#FF2E4C] rounded-full mt-6 shadow-[0_0_10px_#FF2E4C]" />
         </div>
 
-        {/* 4 Cards Grid with Thematic Background Images */}
+        {/* 4 Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((item) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={item.id}
-                className="relative rounded-2xl overflow-hidden border border-[#1E2533] hover:border-[#E63946] transition-all duration-500 group shadow-2xl hover:-translate-y-2 flex flex-col justify-between min-h-[360px]"
-              >
-                {/* 1. Service Background Image with Smooth Zoom on Hover */}
-                <img
-                  src={item.bgImage}
-                  alt={item.title}
-                  className="absolute inset-0 w-full h-full object-cover object-center filter brightness-[0.40] contrast-[1.15] group-hover:scale-110 group-hover:brightness-[0.48] transition-all duration-700"
-                />
+          {services.map((item) => (
+            <div
+              key={item.id}
+              className="relative rounded-2xl overflow-hidden border border-[#1f1f1f] hover:border-[#FF2E4C]/60 transition-all duration-500 group shadow-2xl hover:-translate-y-2 flex flex-col justify-between min-h-[390px] bg-[#111111]"
+            >
+              {/* Background Image */}
+              <img
+                src={item.bgImage}
+                alt={item.title}
+                className="absolute inset-0 w-full h-full object-cover object-center filter brightness-[0.35] contrast-[1.15] group-hover:scale-110 group-hover:brightness-[0.42] transition-all duration-700"
+              />
 
-                {/* 2. Gradient Overlays for High-Contrast Readable Text */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#080A0E] via-[#0E1219]/80 to-[#080A0E]/60 group-hover:via-[#0E1219]/65 transition-colors duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#080A0E]/70 to-transparent pointer-events-none" />
+              {/* Dark Gradients */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/70 to-[#0a0a0a]/30" />
 
-                {/* 3. Card Content Overlay */}
-                <div className="relative z-10 p-7 flex flex-col justify-between h-full">
-                  <div>
-                    {/* Top Row: Icon Badge & Category */}
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="w-14 h-14 rounded-2xl bg-[#151B26]/90 border border-white/10 group-hover:border-[#E63946] flex items-center justify-center text-white group-hover:text-[#E63946] group-hover:shadow-[0_0_25px_rgba(230,57,70,0.5)] transition-all duration-300 backdrop-blur-md">
-                        <Icon className="w-6 h-6 stroke-[2.2]" />
-                      </div>
-                      <span className="text-[10px] font-black uppercase tracking-widest text-[#E63946] px-2.5 py-1 rounded-full bg-black/50 border border-[#E63946]/30 backdrop-blur-sm">
-                        {item.category}
-                      </span>
-                    </div>
-
-                    <h3 className="font-heading text-2xl font-black uppercase text-white mb-3 tracking-wide drop-shadow-md">
-                      {item.title}
-                    </h3>
-
-                    <p className="text-xs text-slate-300 leading-relaxed mb-6 font-medium drop-shadow-sm">
-                      {item.description}
-                    </p>
-                  </div>
-
-                  <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-                    <button
-                      onClick={onOpenJoin}
-                      className="text-xs font-black uppercase tracking-wider text-[#E63946] group-hover:text-white flex items-center gap-1.5 transition-colors cursor-pointer"
-                    >
-                      <span>ENROLL NOW</span>
-                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                    <span className="w-2 h-2 rounded-full bg-[#E63946]/40 group-hover:bg-[#E63946] group-hover:shadow-[0_0_8px_#E63946] transition-all" />
-                  </div>
-                </div>
-
-                {/* Subtle red bottom indicator on hover */}
-                <div className="absolute bottom-0 left-0 w-0 h-[3px] bg-[#E63946] group-hover:w-full transition-all duration-500 shadow-[0_0_10px_#E63946]" />
+              {/* Top Row: Emoji & Badge */}
+              <div className="relative z-10 p-5 flex items-center justify-between">
+                <span className="text-2xl filter drop-shadow-md">{item.emoji}</span>
+                <span className="text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full border backdrop-blur-md bg-[#FF2E4C]/20 text-[#FF2E4C] border-[#FF2E4C]/40">
+                  {item.badge}
+                </span>
               </div>
-            );
-          })}
+
+              {/* Bottom Content */}
+              <div className="relative z-10 p-6 pt-0">
+                <h3 className="font-heading text-2xl font-black uppercase text-white mb-2 tracking-wide group-hover:text-[#FF2E4C] transition-colors">
+                  {item.title}
+                </h3>
+
+                <p className="text-xs text-neutral-300 leading-relaxed font-normal mb-4">
+                  {item.description}
+                </p>
+
+                <button
+                  onClick={onOpenJoin}
+                  className="w-full py-2.5 rounded-xl bg-white/5 hover:bg-gradient-to-r hover:from-[#FF2E4C] hover:to-[#E63946] hover:text-white text-neutral-300 hover:font-extrabold text-[11px] font-bold uppercase tracking-wider transition-all duration-300 border border-white/10 hover:border-transparent flex items-center justify-center gap-1.5 cursor-pointer shadow-[0_0_15px_transparent] hover:shadow-[0_0_20px_rgba(255,46,76,0.4)]"
+                >
+                  <span>GET STARTED</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+
+              {/* Bottom Glowing Accent Bar */}
+              <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-[#FF2E4C] to-[#E63946] group-hover:w-full transition-all duration-500 shadow-[0_0_10px_#FF2E4C]" />
+            </div>
+          ))}
         </div>
 
       </div>

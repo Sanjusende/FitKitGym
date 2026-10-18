@@ -26,38 +26,54 @@ export const PAGE_SECTIONS_CONFIG = [
     pageKey: "AboutSection",
     enabled: true,
     order: 2,
-    description: "About FitKit and scroll-triggered animated stats counter"
+    description: "About FITKIT and scroll-triggered animated stats counter"
   },
   {
     id: "services",
-    name: "Our Services with Background Images",
+    name: "Our Services Built For Champions",
     pageKey: "ServicesSection",
     enabled: true,
     order: 3,
-    description: "Workout Videos, Personal Training, Nutrition, Hypertrophy with background imagery"
+    description: "Personal Training, Cardio Programs, Weight Training, Diet & Nutrition"
+  },
+  {
+    id: "machines",
+    name: "120+ World-Class Machines Arsenal",
+    pageKey: "MachinesSection",
+    enabled: true,
+    order: 4,
+    description: "Biomechanical machinery, plate-loaded presses, and Olympic platforms"
+  },
+  {
+    id: "gallery",
+    name: "Inside FITKIT Gallery Arena",
+    pageKey: "GallerySection",
+    enabled: true,
+    order: 5,
+    description: "Photo tour of the state-of-the-art gym floor and community"
   },
   {
     id: "trainers",
     name: "Expert Trainers & Client Transformations",
     pageKey: "TrainersSection",
     enabled: true,
-    order: 4,
+    order: 6,
     description: "Dedicated Trainers page with real before/after client transformations"
   },
   {
     id: "pricing",
-    name: "Indian Gym Membership Pricing & Reviews",
+    name: "FITKIT Membership Plans & Reviews",
     pageKey: "PricingSection",
     enabled: true,
-    order: 5,
-    description: "Indian gym pricing (₹1499, ₹2499, ₹4999), reviews, and promotional discount banner"
+    order: 7,
+    description: "Ignite Pass, Momentum Pack, Transformation Pack and Member Stories"
   },
   {
     id: "bmi",
     name: "BMI Health Calculator",
     pageKey: "BmiSection",
     enabled: true,
-    order: 6,
+    order: 8,
     description: "Interactive BMI calculation & fitness chart"
   },
   {
@@ -65,7 +81,7 @@ export const PAGE_SECTIONS_CONFIG = [
     name: "Contact & Consultation Form",
     pageKey: "ContactSection",
     enabled: true,
-    order: 7,
+    order: 9,
     description: "Smooth-scroll contact form and direct WhatsApp chat (+91 8815926552)"
   }
 ];

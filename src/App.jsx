@@ -22,7 +22,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#080A0E] text-white flex flex-col selection:bg-[#E63946] selection:text-white font-sans">
+    <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col selection:bg-[#FF2E4C] selection:text-white font-sans">
       {/* 1. Header Navigation Bar */}
       <FitNavbar onOpenJoin={handleOpenJoin} />
 
