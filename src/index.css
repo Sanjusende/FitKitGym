@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-fitkit-red: #E63946;
+  --color-fitkit-red-hover: #D62828;
+  --color-fitkit-red-glow: rgba(230, 57, 70, 0.45);
+  --color-fitkit-dark: #080A0E;
+  --color-fitkit-darker: #050608;
+  --color-fitkit-card: #0E1219;
+  --color-fitkit-card-border: #1E2533;
+  --color-fitkit-gray: #8F9BB3;
+  
+  --font-heading: 'Barlow Condensed', 'Oswald', sans-serif;
+  --font-oswald: 'Oswald', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #080A0E;
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #080A0E;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1E2533;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #E63946;
+  }
+}
+
+/* Red Glow utilities */
+.red-glow {
+  text-shadow: 0 0 25px rgba(230, 57, 70, 0.6), 0 0 50px rgba(230, 57, 70, 0.3);
+}
+
+.red-box-glow {
+  box-shadow: 0 0 30px rgba(230, 57, 70, 0.25), 0 0 60px rgba(230, 57, 70, 0.1);
+}
+
+/* Infinite Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
