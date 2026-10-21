@@ -4,7 +4,7 @@ import FitMarquee from "../components/FitMarquee";
 
 export default function HomeSection({ onOpenJoin }) {
   return (
-    <div id="home" className="scroll-mt-20">
+    <div id="home" className="w-full max-w-full overflow-x-hidden scroll-mt-20">
       {/* 1. Hero Continuous Workout Video Carousel */}
       <FitVideoHero onOpenJoin={onOpenJoin} />
 

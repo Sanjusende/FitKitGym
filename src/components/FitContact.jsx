@@ -46,9 +46,9 @@ export default function FitContact() {
   )}%20training%20for%20the%20${encodeURIComponent(formData.preferredTime)}%20slot.`;
 
   return (
-    <section id="contact" className="py-24 bg-[#0a0a0a] relative scroll-mt-20 border-t border-[#1f1f1f]">
+    <section id="contact" className="py-24 bg-[#0a0a0a] relative scroll-mt-20 border-t border-[#1f1f1f] w-full max-w-full overflow-hidden">
       {/* Background glow accents */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#FF2E4C]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 max-w-full h-96 bg-[#FF2E4C]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
         
@@ -95,9 +95,9 @@ export default function FitContact() {
                 href={directWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-5 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:scale-[1.02]"
+                className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-black font-extrabold text-[11px] sm:text-xs uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:scale-[1.02] text-center"
               >
-                <MessageCircle className="w-4 h-4 fill-black" />
+                <MessageCircle className="w-4 h-4 fill-black shrink-0" />
                 <span>CHAT ON WHATSAPP (+91 8815926552)</span>
               </a>
             </div>
@@ -302,10 +302,10 @@ export default function FitContact() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-full bg-gradient-to-r from-[#FF2E4C] to-[#E63946] text-white font-extrabold text-sm uppercase tracking-wider transition-all duration-300 shadow-[0_0_25px_rgba(255,46,76,0.4)] hover:shadow-[0_0_35px_rgba(255,46,76,0.65)] hover:scale-[1.01] flex items-center justify-center gap-2 group cursor-pointer"
+                  className="w-full py-4 px-4 rounded-full bg-gradient-to-r from-[#FF2E4C] to-[#E63946] text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-[0_0_25px_rgba(255,46,76,0.4)] hover:shadow-[0_0_35px_rgba(255,46,76,0.65)] hover:scale-[1.01] flex items-center justify-center gap-2 group cursor-pointer text-center"
                 >
                   <span>SUBMIT MESSAGE / BOOK CONSULTATION</span>
-                  <Send className="w-4 h-4 stroke-[2.5] group-hover:translate-x-1 transition-transform" />
+                  <Send className="w-4 h-4 stroke-[2.5] group-hover:translate-x-1 transition-transform shrink-0" />
                 </button>
               </form>
             )}
@@ -336,10 +336,10 @@ export default function FitContact() {
               href="https://www.google.com/maps/search/?api=1&query=Prabhat+Petrol+Pump+Bhopal"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#E63946] hover:bg-[#d62839] text-white text-xs font-black uppercase tracking-wider transition-all duration-200 shadow-[0_0_25px_rgba(230,57,70,0.4)] hover:shadow-[0_0_35px_rgba(230,57,70,0.6)] hover:scale-105 self-start sm:self-auto cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#E63946] hover:bg-[#d62839] text-white text-[11px] sm:text-xs font-black uppercase tracking-wider transition-all duration-200 shadow-[0_0_25px_rgba(230,57,70,0.4)] hover:shadow-[0_0_35px_rgba(230,57,70,0.6)] hover:scale-105 self-stretch sm:self-auto text-center cursor-pointer"
             >
               <span>GET DIRECTIONS ON GOOGLE MAPS</span>
-              <ExternalLink className="w-4 h-4" />
+              <ExternalLink className="w-4 h-4 shrink-0" />
             </a>
           </div>
 

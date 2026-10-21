@@ -83,25 +83,15 @@ export default function FitVideoHero({ onOpenJoin }) {
               muted
               loop
               playsInline
-              className="w-full h-full object-cover object-center filter brightness-[0.55] contrast-[1.15]"
+              className="w-full h-full object-cover object-center filter brightness-100 contrast-100"
             />
           </div>
         );
       })}
 
-      {/* 2. Gradient Overlays for High-Contrast Cinematic Aesthetic */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/95 via-[#0a0a0a]/70 to-[#0a0a0a]/40 z-10 pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-[#0a0a0a]/60 z-10 pointer-events-none" />
-      
-      {/* Subtle background tech grid lines */}
-      <div 
-        className="absolute inset-0 z-10 pointer-events-none opacity-15"
-        style={{
-          backgroundImage: `linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-                            linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
-        }}
-      />
+      {/* 2. Soft, Light Overlays - Keeps Video Bright & Clear while Text is perfectly readable */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent z-10 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/90 via-transparent to-transparent z-10 pointer-events-none" />
 
       {/* 3. Left/Right Slide Arrows */}
       <button
@@ -114,26 +104,26 @@ export default function FitVideoHero({ onOpenJoin }) {
 
       <button
         onClick={handleNext}
-        className="hidden md:flex absolute right-16 sm:right-20 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full border border-white/10 hover:border-[#FF2E4C] bg-black/40 hover:bg-black/80 items-center justify-center text-white/70 hover:text-[#FF2E4C] transition-all cursor-pointer backdrop-blur-sm"
+        className="hidden md:flex absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full border border-white/10 hover:border-[#FF2E4C] bg-black/40 hover:bg-black/80 items-center justify-center text-white/70 hover:text-[#FF2E4C] transition-all cursor-pointer backdrop-blur-sm"
         aria-label="Next Slide"
       >
         <ChevronRight className="w-5 h-5" />
       </button>
 
       {/* 4. Center-Left Hero Content Overlay */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 w-full relative z-20 pt-16 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-12 lg:px-16 w-full relative z-20 pt-16 pb-20">
         <div className="max-w-3xl">
           
           {/* Eyebrow Badge with trailing horizontal red line */}
           <div className="flex items-center gap-3 mb-6">
-            <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#FF2E4C]/50 bg-[#FF2E4C]/10 text-[#FF2E4C] text-[11px] font-extrabold tracking-widest uppercase shadow-[0_0_15px_rgba(255,46,76,0.25)]">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#FF2E4C]/50 bg-[#FF2E4C]/10 text-[#FF2E4C] text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase shadow-[0_0_15px_rgba(255,46,76,0.25)]">
               {slide.badge}
             </span>
             <div className="hidden sm:block h-[1px] w-36 bg-gradient-to-r from-[#FF2E4C]/70 to-transparent" />
           </div>
 
           {/* Huge White & Neon Red Chiseled Typography */}
-          <h1 className="font-heading text-5xl sm:text-7xl lg:text-[5.5rem] font-black uppercase tracking-tight leading-[0.92] mb-6 drop-shadow-2xl">
+          <h1 className="font-heading text-4xl sm:text-6xl lg:text-[5.5rem] font-black uppercase tracking-tight leading-[0.95] mb-6 drop-shadow-2xl break-words">
             <span className="block text-[#FF2E4C] neon-glow">
               {slide.titleLine1}
             </span>
@@ -143,15 +133,15 @@ export default function FitVideoHero({ onOpenJoin }) {
           </h1>
 
           {/* Subtitle Description */}
-          <p className="text-base sm:text-lg text-neutral-300 font-normal leading-relaxed max-w-xl mb-10">
+          <p className="text-sm sm:text-lg text-neutral-200 font-normal leading-relaxed max-w-xl mb-8 sm:mb-10 drop-shadow-md">
             {slide.subtitle}
           </p>
 
           {/* Dual Action Buttons matching red & black style */}
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
             <button
               onClick={onOpenJoin}
-              className="px-8 py-4 rounded-full bg-gradient-to-r from-[#FF2E4C] to-[#E63946] text-white font-extrabold text-sm tracking-wider uppercase transition-all duration-300 shadow-[0_0_25px_rgba(255,46,76,0.5)] hover:shadow-[0_0_40px_rgba(255,46,76,0.8)] hover:scale-105 flex items-center gap-2 group cursor-pointer"
+              className="justify-center px-7 sm:px-8 py-3.5 sm:py-4 rounded-full bg-gradient-to-r from-[#FF2E4C] to-[#E63946] text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 shadow-[0_0_25px_rgba(255,46,76,0.5)] hover:shadow-[0_0_40px_rgba(255,46,76,0.8)] hover:scale-105 flex items-center gap-2 group cursor-pointer"
             >
               <span>{slide.ctaPrimary}</span>
               <ArrowRight className="w-4 h-4 stroke-[2.5] group-hover:translate-x-1 transition-transform" />
@@ -159,7 +149,7 @@ export default function FitVideoHero({ onOpenJoin }) {
 
             <button
               onClick={scrollToServices}
-              className="px-8 py-4 rounded-full bg-[#111111]/80 hover:bg-[#1a1a1a] border border-white/20 hover:border-[#FF2E4C] text-white hover:text-[#FF2E4C] font-extrabold text-sm tracking-wider uppercase transition-all duration-300 backdrop-blur-md cursor-pointer"
+              className="text-center justify-center px-7 sm:px-8 py-3.5 sm:py-4 rounded-full bg-[#111111]/80 hover:bg-[#1a1a1a] border border-white/20 hover:border-[#FF2E4C] text-white hover:text-[#FF2E4C] font-extrabold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 backdrop-blur-md cursor-pointer"
             >
               {slide.ctaSecondary}
             </button>

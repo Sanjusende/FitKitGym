@@ -34,7 +34,7 @@ export default function HomePage({ onOpenJoin, onSelectPlan }) {
   }, []);
 
   return (
-    <div className="flex flex-col flex-1 w-full">
+    <div className="flex flex-col flex-1 w-full max-w-full overflow-x-hidden min-w-0">
       {activePages.map((pageConfig) => {
         const SectionComponent = PAGES_REGISTRY[pageConfig.pageKey];
         if (!SectionComponent) {

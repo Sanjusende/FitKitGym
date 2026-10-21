@@ -22,7 +22,7 @@ export default function FitBmiCalculator({ onOpenJoin }) {
   };
 
   return (
-    <section id="bmi" className="py-24 bg-[#0a0a0a] border-t border-[#1f1f1f] relative">
+    <section id="bmi" className="py-24 bg-[#0a0a0a] border-t border-[#1f1f1f] relative w-full max-w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Section Header */}
@@ -100,7 +100,7 @@ export default function FitBmiCalculator({ onOpenJoin }) {
                 </div>
                 <button
                   onClick={onOpenJoin}
-                  className="px-6 py-3 rounded-full bg-white text-black font-extrabold text-xs uppercase tracking-wider hover:bg-slate-200 transition-colors flex-shrink-0 cursor-pointer"
+                  className="w-full sm:w-auto px-6 py-3 rounded-full bg-white text-black font-extrabold text-xs uppercase tracking-wider hover:bg-slate-200 transition-colors text-center cursor-pointer"
                 >
                   Get Custom Diet Plan
                 </button>

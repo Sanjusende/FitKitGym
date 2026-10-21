@@ -30,7 +30,7 @@ export default function FitTrainers({ onOpenJoin }) {
   ];
 
   return (
-    <section className="py-24 bg-[#0a0a0a] border-t border-[#1f1f1f] relative">
+    <section className="py-24 bg-[#0a0a0a] border-t border-[#1f1f1f] relative w-full max-w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Section Header */}

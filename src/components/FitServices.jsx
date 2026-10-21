@@ -42,10 +42,10 @@ export default function FitServices({ onOpenJoin }) {
   ];
 
   return (
-    <section id="services" className="py-24 bg-[#0a0a0a] relative scroll-mt-20 border-t border-[#1f1f1f]">
+    <section id="services" className="py-24 bg-[#0a0a0a] relative scroll-mt-20 border-t border-[#1f1f1f] w-full max-w-full overflow-hidden">
       
       {/* Background glow accent */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#FF2E4C]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] max-w-full h-[300px] bg-[#FF2E4C]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
         
@@ -72,39 +72,39 @@ export default function FitServices({ onOpenJoin }) {
           {services.map((item) => (
             <div
               key={item.id}
-              className="relative rounded-2xl overflow-hidden border border-[#1f1f1f] hover:border-[#FF2E4C]/60 transition-all duration-500 group shadow-2xl hover:-translate-y-2 flex flex-col justify-between min-h-[390px] bg-[#111111]"
+              className="relative rounded-2xl overflow-hidden border border-[#242424] hover:border-[#FF2E4C] transition-all duration-500 group shadow-2xl hover:-translate-y-2 flex flex-col justify-between min-h-[420px] bg-[#111111]"
             >
-              {/* Background Image */}
+              {/* Background Image - 100% Bright & Visible */}
               <img
                 src={item.bgImage}
                 alt={item.title}
-                className="absolute inset-0 w-full h-full object-cover object-center filter brightness-[0.35] contrast-[1.15] group-hover:scale-110 group-hover:brightness-[0.42] transition-all duration-700"
+                className="absolute inset-0 w-full h-full object-cover object-center filter brightness-100 contrast-[1.02] group-hover:scale-110 group-hover:brightness-105 transition-all duration-700"
               />
 
-              {/* Dark Gradients */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/70 to-[#0a0a0a]/30" />
+              {/* Light transparent gradient only darkening the bottom for text */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 via-50% to-transparent pointer-events-none" />
 
               {/* Top Row: Emoji & Badge */}
               <div className="relative z-10 p-5 flex items-center justify-between">
-                <span className="text-2xl filter drop-shadow-md">{item.emoji}</span>
-                <span className="text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full border backdrop-blur-md bg-[#FF2E4C]/20 text-[#FF2E4C] border-[#FF2E4C]/40">
+                <span className="text-2xl filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">{item.emoji}</span>
+                <span className="text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full border backdrop-blur-md bg-black/70 text-[#FF2E4C] border-[#FF2E4C]/50 shadow-md">
                   {item.badge}
                 </span>
               </div>
 
-              {/* Bottom Content */}
-              <div className="relative z-10 p-6 pt-0">
-                <h3 className="font-heading text-2xl font-black uppercase text-white mb-2 tracking-wide group-hover:text-[#FF2E4C] transition-colors">
+              {/* Bottom Content with dark scrim for ultra-clear typography */}
+              <div className="relative z-10 p-6 pt-4 bg-gradient-to-t from-black/95 via-black/85 to-transparent">
+                <h3 className="font-heading text-2xl font-black uppercase text-white mb-2 tracking-wide group-hover:text-[#FF2E4C] transition-colors drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
                   {item.title}
                 </h3>
 
-                <p className="text-xs text-neutral-300 leading-relaxed font-normal mb-4">
+                <p className="text-xs text-neutral-200 leading-relaxed font-medium mb-4 drop-shadow-[0_1px_6px_rgba(0,0,0,1)]">
                   {item.description}
                 </p>
 
                 <button
                   onClick={onOpenJoin}
-                  className="w-full py-2.5 rounded-xl bg-white/5 hover:bg-gradient-to-r hover:from-[#FF2E4C] hover:to-[#E63946] hover:text-white text-neutral-300 hover:font-extrabold text-[11px] font-bold uppercase tracking-wider transition-all duration-300 border border-white/10 hover:border-transparent flex items-center justify-center gap-1.5 cursor-pointer shadow-[0_0_15px_transparent] hover:shadow-[0_0_20px_rgba(255,46,76,0.4)]"
+                  className="w-full py-2.5 rounded-xl bg-[#FF2E4C]/20 hover:bg-gradient-to-r hover:from-[#FF2E4C] hover:to-[#E63946] hover:text-white text-white font-extrabold text-[11px] uppercase tracking-wider transition-all duration-300 border border-[#FF2E4C]/50 hover:border-transparent flex items-center justify-center gap-1.5 cursor-pointer shadow-[0_0_15px_rgba(255,46,76,0.25)] hover:shadow-[0_0_25px_rgba(255,46,76,0.6)] backdrop-blur-sm"
                 >
                   <span>GET STARTED</span>
                   <ArrowRight className="w-3.5 h-3.5" />

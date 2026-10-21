@@ -11,7 +11,7 @@ export default function FitFooter() {
   const whatsappUrl = "https://wa.me/918815926552?text=Hi%20FitKit!%20I'd%20like%20to%20know%20more%20about%20your%20gym%20membership.";
 
   return (
-    <footer className="bg-[#0a0a0a] border-t border-[#1f1f1f] pt-16 pb-12 text-neutral-400">
+    <footer className="bg-[#0a0a0a] border-t border-[#1f1f1f] pt-16 pb-12 text-neutral-400 w-full max-w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#1f1f1f]">
@@ -117,16 +117,16 @@ export default function FitFooter() {
               </a>
             </div>
 
-            <form onSubmit={(e) => { e.preventDefault(); alert("Thank you for subscribing to FITKIT updates!"); }} className="flex items-center">
+            <form onSubmit={(e) => { e.preventDefault(); alert("Thank you for subscribing to FITKIT updates!"); }} className="flex items-center w-full">
               <input
                 type="email"
                 required
                 placeholder="Enter your email..."
-                className="w-full bg-[#161616] border border-[#1f1f1f] rounded-l-full px-4 py-2.5 text-xs text-white focus:outline-none focus:border-[#FF2E4C]"
+                className="w-full min-w-0 bg-[#161616] border border-[#1f1f1f] rounded-l-full px-4 py-2.5 text-xs text-white focus:outline-none focus:border-[#FF2E4C]"
               />
               <button
                 type="submit"
-                className="bg-gradient-to-r from-[#FF2E4C] to-[#E63946] text-white px-4 py-2.5 rounded-r-full font-bold hover:opacity-90 transition-opacity cursor-pointer shadow-[0_0_15px_rgba(255,46,76,0.3)]"
+                className="bg-gradient-to-r from-[#FF2E4C] to-[#E63946] text-white px-4 py-2.5 rounded-r-full font-bold hover:opacity-90 transition-opacity cursor-pointer shadow-[0_0_15px_rgba(255,46,76,0.3)] shrink-0"
                 aria-label="Subscribe"
               >
                 <Send className="w-3.5 h-3.5 stroke-[2.5]" />

@@ -10,7 +10,7 @@ export default function FitMarquee() {
   ];
 
   return (
-    <div className="w-full bg-[#0a0a0a] border-t border-b border-[#1f1f1f] py-3.5 overflow-hidden relative select-none">
+    <div className="w-full max-w-full bg-[#0a0a0a] border-t border-b border-[#1f1f1f] py-3.5 overflow-hidden relative select-none">
       <div className="flex w-max animate-marquee whitespace-nowrap">
         {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, idx) => (
           <div key={idx} className="flex items-center mx-6">

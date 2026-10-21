@@ -22,12 +22,12 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col selection:bg-[#FF2E4C] selection:text-white font-sans">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#0a0a0a] text-white flex flex-col selection:bg-[#FF2E4C] selection:text-white font-sans">
       {/* 1. Header Navigation Bar */}
       <FitNavbar onOpenJoin={handleOpenJoin} />
 
       {/* 2. Configurable Dynamic Page Layout (Controlled via src/config/pageSections.js) */}
-      <main className="flex-1">
+      <main className="flex-1 w-full max-w-full overflow-x-hidden min-w-0">
         <HomePage onOpenJoin={handleOpenJoin} onSelectPlan={handleSelectPlan} />
       </main>
 
